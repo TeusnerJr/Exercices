@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Le titre de la page -->
+    <title>Cours HTML</title>
+    <!-- Icone de l'onglet-->
+
+    <link rel="shortcut icon" href="logo_html.png.webp"/>
+
+</head>
+
+<body>
+    <section>
+
+        <div>
+            <h1>Titre - H1 Le texte </h1>
+            <p> le texte basique <em>voici un texte en italique</em> <strong> Et un texte en gras</strong> <span>un élement en span qui ne revienpas à la ligne ?</span></p>
+            <p> Re test test Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi, beatae dolores, perferendis, aut repellat distinctio perspiciatis eos qui odio ut temporibus in facilis excepturi modi officia fuga cupiditate quisquam nam?</p>
+        </div>
+
+        <div>
+            <h2>Titre - H2 Les images</h2>
+            <img src="Photo1.jpg" height="200" alt="une photo de paysage à la montagne">
+        </div>
+
+        <div>
+            <h3>Titre - H3 les listes à puces </h3>
+            <ul>
+                <li> une liste sans ordre numéraire</li>
+                <li> une liste sans ordre numéraire</li>
+                <li> une liste sans ordre numéraire</li>
+                <li> une liste sans ordre numéraire</li>
+                <li> une liste sans ordre numéraire</li>
+                <li> une liste sans ordre numéraire</li>
+                <li> voici un test blabla</li>
+            </ul>
+
+            <ol>
+                <li> une liste ordonnée</li>
+                <li> une liste ordonnée</li>
+                <li> une liste ordonnée</li>
+                <li> une liste ordonnée</li>
+                <li> une liste ordonnée</li>
+                <li> une liste ordonnée</li>
+                
+            </ol>
+        </div>
+
+        <div>
+            <h4>Titre - h4 les tableaux</h4>
+
+            <table border="1" width="50%"> 
+                <!-- Légende -->
+                <caption> Populations d'europe</caption>
+                <!-- En-tete -->
+                <thead>
+                    <tr> 
+                        <th> Pays</th>
+                        <th>population</th>
+                    </tr>
+                </thead>
+
+                <!-- Corps du tableau -->
+                <tbody>
+                    <tr>
+                        <td> France</td>
+                        <td>66M</td>
+                    </tr>
+
+                    <tr>
+                        <td> Allemagne</td>
+                        <td>82M</td>
+                    </tr>
+
+                    <tr>
+                        <td> Espagne</td>
+                        <td>47M</td>
+                    </tr>
+
+                </tbody>
+             </table>
+
+        </div>
+
+        <div>
+            <h5>Titre - H5 Les Liens</h5>
+            <a href="https://tv.apple.com/fr">Le lien à suivre</a>
+        </div>
+
+        <div>
+            <h6>Titre - H6 Les Videos</h6>
+            <video src="vidéo1.mp4" height="200" autoplay loop muted></video>
+        </div>
+
+    </section>
+    
+    <section>
+        <h2>Les Formulaires</h2>
+        <form action="</action.php" method="post">
+          <label for="name">Nom :</label>  <input id="name" type="text" placeholder="Entrez votre nom">
+           <br> 
+           <label for="age">Age</label>
+           <input id="age" type="number" min="1" max="99" step="1" value="18">
+           <br>
+                <!-- Input de type select-->
+            <label for="gender">Genre</label>
+            <select id="gender" type="select">
+                <option value="Homme">Homme</option>
+                <option selected value="Femme">Femme</option>
+                </select>
+                <br>
+
+                <!-- Input type radio-->
+                <section>
+                    
+                    <input type="radio" name="type" id="cat">
+                    <label for="cat">chat</label>
+
+                    <input type="radio" name="type" id="human">
+                    <label for="human">humain</label>
+
+                    <input checked type="radio" name="type" id="dog">
+                    <label for="dog">chien</label>
+                    <br>
+                    <textarea name="1" id="1" cols="30" rows="10" placeholder="Entrez votre demande ici"></textarea>
+                    <br>
+
+                    <!-- Input de type checkbox-->
+
+                    <label><input type="checkbox" checked>Accepter les CGV</label>
+                    <br>
+                    <input type="submit" value="Valider">
+                </section>
+                
+               
+        </form>
+
+    </section>
+   <br>
+    
+        <!-- Mail et envoi de fichier -->
+    <footer>
+        <a href="hugoroulet@yahoo.fr">Ecrivez-moi !</a> <br>
+
+        <a href="Photo1.jpg" download="photo1">Télécharger la notice</a>
+
+    </footer>    
+
+</body>
+
+</html>
