@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: "font-1";
+    src: url(./assets/Bitter/Bitter-VariableFont_wght.ttf);
+}
+
+/* Pour tout sélectionner 
+*{
+    margin: 0px;
+    padding: 0px;
+} */
+
+body {
+    background: url(./bg.jpg) no-repeat fixed center/cover;   
+    font-family: 'font-1', serif;
+    color: aliceblue;
+    height: 300vh;
+    
+   /* overflow: hidden; pour ne plus avoir de barre de défilement */
+    
+}
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 2.5em;
+    text-align: center;
+    color: rgb(255, 166, 0);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    font-weight: bold; 
+    font-family: 'Roboto', sans-serif;
+
+    
+} 
+
+main {
+    background-color: rgba(255, 0, 0, 0.349);
+    width: 85%;
+    min-height: 500px;
+    margin: 0px auto;
+    padding: 10px 25px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 5px rgba(245, 245, 220, 0.384);
+}
+
+p {
+    text-align: justify;
+}
+
+.positioning, .flexbox {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+    }
+
+.positioning {
+    position: relative;
+    }
+
+h2 {
+    margin: 0px;
+}
+
+#circle {
+    background-color: rgb(255, 200, 36);
+    height: 60px;
+    width: 60px;
+    position: absolute;
+    padding: 20px;
+    border-radius: 100%;
+    top: -10px;
+    right: 0;
+    box-shadow: 0px 0px 15px rgba(255, 71, 71, 0.771);
+    text-align: center;
+}
+
+#rectangle {
+    background-color: rgb(255, 200, 36);
+    height: 15px;
+    width: 100px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: -1;
+    
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 10px;
+
+}
+
+li {
+    list-style: none;
+    font-size: 0,7rem;
+    background-color: rgba(0, 83, 8, 0.551);
+    height: 100px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
