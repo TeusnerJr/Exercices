@@ -48,7 +48,7 @@ p {
     text-align: justify;
 }
 
-.positioning, .flexbox {
+.positioning, .flexbox, .grid {
     border: 2px solid black;
     padding: 10px;
     margin: 20px;
@@ -110,3 +110,84 @@ li {
     justify-content: center;
 
 }
+.grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    'i1 i2'
+    'ta ta'
+    'bt bt';
+}
+#firstname {
+    grid-area: i1;
+}
+
+#surname {
+    grid-area: i2;
+}
+
+textarea {
+    grid-area: ta;
+    resize: none;
+}
+
+input[type="submit"] {
+    grid-area: bt;
+    background: antiquewhite;
+}
+
+input, textarea {
+    margin: 5px;
+    height: 45px;
+    border: 1px solid rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: blueviolet;
+    transition: 0,4s;
+}
+
+
+@media screen and (max-width: 1000px) {
+ 
+    .img {
+       
+        position: relative;
+        margin-left: 50%;
+    transform: translate(-50%);
+    
+        
+
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: 100%
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        'i1'
+        'i2'
+        'ta'
+        'bt';
+    }
+
+}
+
