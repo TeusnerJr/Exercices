@@ -1,0 +1,324 @@
+:root {
+    --color1: #ede4d0;
+    --color2: pink;
+    --color3: #393b4b;
+    --color4: rgb(18,19,19);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(./bg.jpg) center/cover;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.card{
+    background: rgba(0, 0, 0, 0.51);
+    width: calc(100% - 50px);
+    padding: 20px 20px 6px;
+    box-shadow: 0px 100px 100px rgba(0, 0, 0, 0.551);
+    border-radius: 5px;
+    backdrop-filter: blur(3px);
+}
+
+.card:before {
+    content: "\2730" ;
+    /* https://www.toptal.com/designers/htmlarrows/symbols/ pour avoir les icones de CSS */
+
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    font-size: 2.4rem;
+    
+}
+
+
+h1 {
+    margin-bottom: 24px ;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    background: var(--color2);
+    height: 1px;
+    width: 100%;
+    bottom: -15px;
+    transform: translateX(-50%) scaleX(0);
+    left: 50%;
+    animation: h1anim 7s ease-in-out forwards;
+    transform-origin: center;
+
+}
+
+@keyframes h1anim {
+    100% {
+        transform: translateX(-50%) scaleX(1);
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.polygon-container {
+    filter: drop-shadow(-1px 10px 3px var(--color2));
+    /*mettre le parent en Grid pour centrer de cette facon */
+    place-self: center left;
+}
+
+.polygon {
+    /* https://bennettfeely.com/clippy/ pour faire des polygon */
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+
+    /* https://webgradients.com/ idée de gradient */
+
+    height: 100px;
+    width: 100px;
+
+}
+
+
+.polygon:after {
+    content: "Un texte";
+    position: absolute;
+    color: var(--color2);
+    background: var(--color4);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+    width: 90px;
+    padding: 6px;
+    text-align: center;
+}
+
+p {
+    line-height: 26px;
+    margin: 20px 0px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+    text-align: justify;
+    
+}
+
+p::selection {
+    background: var(--color2);
+    color: var(--color3);
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0 30px;
+    perspective: 40px;
+}
+
+input[type="checkbox"] {
+display: none;
+}
+
+input[type="checkbox"]:checked + label {
+    background: var(--color2);
+    color: var(--color3);
+    transform: scale(1.15);
+}
+
+label {
+    cursor: pointer;
+    border: 1px solid var(--color1);
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.1s;
+    user-select: none;
+}
+
+label:first-of-type:hover {
+animation: label1 1s infinite linear
+}
+
+@keyframes label1 {
+    50% {
+        transform: scale(1.4)
+            }
+  100% {
+    transform: scale(1);
+  }
+}
+
+label:nth-child(4):hover {
+    animation: label2 3s infinite;
+}
+
+@keyframes label2 {
+    33% {
+        transform: translateZ(30px);
+    }
+    66% {
+        transform: translateZ(-40px);
+    }
+    100%{
+        transform: translateZ(0);
+    }
+}
+
+/* https://cssgenerator.org/ */
+
+.email {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.email input {
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 3px solid transparent;
+    transition: 0.3s;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--color1);
+    min-width: 180px;
+    width: 35%;
+    max-width: 300px;
+}
+
+input[type="text"]:focus {
+    background: transparent;
+    border: 3px solid var(--color2);
+    border-radius: 150px;
+
+}
+
+input[type="text"]::placeholder {
+    color: var(--color2);
+}
+
+button {
+    cursor: pointer;
+    background: var(--color2);
+    border: none;
+    font-size: 1.3rem;
+    padding: 10px 20px;
+    border-radius: 150px;
+    margin: 0 auto;
+    display: block;
+    transition: 1s;
+}
+
+button:hover {
+    letter-spacing: 3px;
+}
+
+button:hover +a, a:hover {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+
+}
+
+a {
+    color: var(--color2);
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    margin: 10px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.8s;
+    visibility: hidden;
+}
+
+a:visited {
+    color: var(--color1);
+}
+
+button:active {
+    transform: scale(1.5);
+}
+
+img {
+    height: 40px;
+    position: absolute;
+    filter: drop-shadow(0px 6px 3px rgba(224, 191, 7, 0.685));
+    z-index: -1;
+    animation: spaceship 15s infinite linear;
+}
+
+@keyframes spaceship {
+    0% {
+        top: 2%;
+        left: 2%;
+        transform: rotate(90deg);
+    }
+    10% {
+        top: 6%;
+        left: 15%;
+        transform: rotate(95deg);
+    }
+    20% {
+        top: 9%;
+        left: 60%;
+        transform: rotate(30deg);
+    }
+    30% {
+        top: 0%;
+        left: 80%;
+        transform: rotate(180deg);
+    }
+    40% {
+        top: 20%;
+        left: 122%;
+        transform: rotate(180deg);
+    }
+    50% {
+        top: 50%;
+        left: 50%;
+        transform: rotate(190deg);
+    }
+    70% {
+        top: 90%;
+        left: 30%;
+        transform: rotate(215deg);
+    }
+    80% {
+        top: 110%;
+        left: 70%;
+        transform: rotate(90deg);
+    }
+    90% {
+        top: 85%;
+        left: 15%;
+        transform: rotate(0deg);
+    }
+    95%{
+        top: 40%;
+        left: 15%;
+        transform: rotate(80deg);
+        
+
+    }
+    100% {
+        top: 2%;
+        left: 2%;
+        transform: rotate(90deg);
+    }
+
+}
+
+/* remove.bg/fr pour supprimer l'arrière plan d'une image*/
