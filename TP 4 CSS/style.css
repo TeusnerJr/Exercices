@@ -1,0 +1,36 @@
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  "yellow yellow purple"
+  "red green purple"
+  "red light-purple light-purple";
+  gap: 30px;
+ 
+}
+
+div:nth-child(1) {
+  background: yellow;
+  grid-area: yellow;
+  
+}
+div:nth-child(2) {
+  background: purple;
+  grid-area: purple;
+}
+div:nth-child(3) {
+  background: green;
+  grid-area: green;
+}
+
+div:nth-child(4) {
+  background: red;
+  grid-area: red;
+}
+div:nth-child(5) {
+  background: orchid;
+  grid-area: light-purple;
+}
+
